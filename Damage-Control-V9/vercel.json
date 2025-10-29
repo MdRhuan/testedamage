@@ -1,0 +1,15 @@
+{
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    {
+      "source": "/((?!api).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/[...slug].ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}
